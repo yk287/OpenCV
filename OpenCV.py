@@ -11,6 +11,13 @@ def video_to_frame(directory, video_name):
     :param video_name: name of the files
     :return: null
     '''
+
+    '''
+    A function that takes in a list of names of files and the directory those files are in
+    and saves every frame in the source file as a jpg file into their own folder.
+    
+    Name of the folder is the name of the file name without the file extension. 
+    '''
     import cv2
     import os
 
