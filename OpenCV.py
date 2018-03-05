@@ -4,11 +4,12 @@
 OpenCV practice
 '''
 
-def video_to_frame(directory, video_name):
+def video_to_frame(directory, video_name, file_extension):
 
     '''
     :param directory: directory of files
     :param video_name: name of the files
+    :param file_extension: file extension the output should be
     :return: null
     '''
 
@@ -37,7 +38,7 @@ def video_to_frame(directory, video_name):
         ret = 1
         index = 0
 
-        new_name = '\\' + name.split('.')[0] + '_{0}.jpg'
+        new_name = '\\' + name.split('.')[0] + '_{0}.' + '{0}'.format(file_extension)
 
         while (ret):
             ret, frame = cap.read()
@@ -52,7 +53,9 @@ def video_to_frame(directory, video_name):
 #        cap.release()
 #       cv2.destroyAllWindows()
 
-direc = r'C:\Users\name\Documents'
-video_to_frame(direc, name)
+direc = r'C:\Users\Youngwook\Documents'
 name = []
 name = np.append(name, 'superman.webm')
+name = np.append(name, 'JMdN6AB.mp4')
+
+video_to_frame(direc, name, 'jpg')
