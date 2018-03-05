@@ -46,16 +46,16 @@ def video_to_frame(directory, video_name, file_extension):
             cv2.imwrite(new_directory + new_name.format(index), frame)
             index += 1
 
+        cap.release()
+        cv2.destroyAllWindows()
 
-# if cv2.waitKey(37) & 0xFF == ord('q'):
-#                break
+'''
+Usage
 
-#        cap.release()
-#       cv2.destroyAllWindows()
-
-direc = r'C:\Users\Youngwook\Documents'
+direc = r'C:\Users\Documents'
 name = []
 name = np.append(name, 'superman.webm')
 name = np.append(name, 'JMdN6AB.mp4')
 
 video_to_frame(direc, name, 'jpg')
+'''
