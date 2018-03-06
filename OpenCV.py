@@ -4,7 +4,7 @@
 OpenCV practice
 '''
 
-def video_to_frame(directory, video_name, file_extension):
+def video_to_frame(directory, video_name, file_extension = 'jpg'):
 
     '''
     :param directory: directory of files
